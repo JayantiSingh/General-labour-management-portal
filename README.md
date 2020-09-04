@@ -1,0 +1,2 @@
+# General-labour-management-portal
+This application is developed by Team " QTech"  from Grace Hopper Conference India 20 Codeathon for Women Students.The theme is providing solutions for the problems caused by COVID-19.The “General labour management portal”, a technological solution for a unified platform for employment &amp; employee management database to maintain the non localised workers (mazdoor, daily wage workers, farmers, labourers, street vendors).It goes about as a correspondence interface among users and the requirter with the web application.
