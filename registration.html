@@ -1,0 +1,94 @@
+
+<?php
+require_once('config.php');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user registration</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+
+	<div>
+		<?php
+			if(isset($_POST['create'])){
+				$firstname    	=$_POST['firstname'];
+				$Date_of_Birth	=$_POST['DoB'];
+				$phoneno		=$_POST['phoneno'];
+				$Password		=$_POST['Password'];
+
+				$sql = "INSERT INTO users(firstname, dob, phoneno, password) VALUES(?,?,?,?)";
+				$stmtinsert = $conn->prepare($sql);
+				$result = $stmtinsert->execute([$firstname,$Date_of_Birth,$phoneno,$Password]);
+				if($result){
+					echo "successfully saved";
+					}
+					else{
+						echo "not saved";
+						}
+				}
+		?>
+	</div>
+	<div>
+		<form action="registration.php" method="post">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<h4>Create your account</h4>
+						<h4>खाता खोले</h4>
+						<audio controls>
+							<source src="audios/khatakholeOGG.ogg" type="audio/ogg"></source>
+							<source src="audios/khatakhole.mp3" type="audio/mpeg"></source>
+							Your browser does not support the audio element.
+						</audio>
+
+						<hr class="mb-3">
+						<label for="firstname">Enter Your Name
+							<audio controls>
+							<source src="audios/name_ogg.ogg" type="audio/ogg"></source>
+							<source src="audios/name.mp3" type="audio/mpeg"></source>
+							Your browser does not support the audio element.
+						</audio>
+						</label>
+						<input class="form-control" type="text" name="firstname" required>
+
+						<label for="DoB">Enter Your Date Of Birth
+							<audio controls>
+							<source src="audios/name_ogg.ogg" type="audio/ogg"></source>
+							<source src="audios/name.mp3" type="audio/mpeg"></source>
+							Your browser does not support the audio element.
+							</audio>
+						</label>
+						<input class="form-control" type="text" name="DoB" required>
+
+						<label for="phoneno">Enter Your Phone Number
+							<audio controls>
+							<source src="audios/name_ogg.ogg" type="audio/ogg"></source>
+							<source src="audios/name.mp3" type="audio/mpeg"></source>
+							Your browser does not support the audio element.
+						</audio>
+
+						</label>
+						<input class="form-control" type="text" name="phoneno" required>
+
+						<label for="Password">Enter Your Password
+							<audio controls>
+							<source src="audios/name_ogg.ogg" type="audio/ogg"></source>
+							<source src="audios/name.mp3" type="audio/mpeg"></source>
+							Your browser does not support the audio element.
+						</audio>
+
+						</label>
+						<input class="form-control" type="Password" name="Password" required>
+						<hr class="mb-3">
+
+						<input class="btn btn-primary" type="submit" name="create" value="create account">
+					</div>
+				</div>	
+			</div>
+		</form>
+	</div>
+    
+</body>
+</html>
