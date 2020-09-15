@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<style>
+			.navbar a:hover {
+			background-color: DarkSalmon;
+			color: black;
+			}
+			.navbar a.active {
+            background-color: DarkSalmon;
+            color: white;
+            }
+			
+
+			footer {
+            display: block;
+			text-align: center;
+			padding: 3px;
+			background-color: DarkSalmon;
+			color: white;
+			}
+			.responsive {
+			width: 100%;
+			height: auto;
+			}
+			* {
+			  box-sizing: border-box;
+			}
+
+			/* Position the image container (needed to position the left and right arrows) */
+			.container {
+			  position: relative;
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+			  display: none;
+			}
+
+			/* Add a pointer when hovering over the thumbnail images */
+			.cursor {
+			  cursor: pointer;
+			}
+
+			/* Next & previous buttons */
+			.prev,
+			.next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 40%;
+			  width: auto;
+			  padding: 16px;
+			  margin-top: -50px;
+			  color: white;
+			  font-weight: bold;
+			  font-size: 20px;
+			  border-radius: 0 3px 3px 0;
+			  user-select: none;
+			  -webkit-user-select: none;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+			  right: 0;
+			  border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover,
+			.next:hover {
+			  background-color: rgba(0, 0, 0, 0.8);
+			}
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 0;
+			}
+
+			/* Container for image text */
+			.caption-container {
+			  text-align: center;
+			  background-color: #222;
+			  padding: 2px 16px;
+			  color: white;
+			}
+
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+			/* Six columns side by side */
+			.column {
+			  float: left;
+			  width: 16.66%;
+			}
+
+			/* Add a transparency effect for thumnbail images */
+			.demo {
+			  opacity: 0.6;
+			}
+
+			.active,
+			.demo:hover {
+			  opacity: 1;
+			}
+			/* indent*/
+			.tab{ margin-left: 40px; }
+			.tab{ margin-right: 40px;}
+			/*container*/
+			.container{
+            height: 622px;
+            width: 100%;
+            background: #FF5722;
+				}
+				h2{
+			margin: 0px;
+			text-align: center;
+			font-size: 40px;
+			color: #ffffffc2;
+				}
+				h3{
+			text-align: center;
+			font-size: 36px;
+			color: #CDDC39;
+			border-bottom: 2px solid #ff5722;
+			margin: 22px;
+			padding: 12px;
+				}
+				p{
+			text-align: justify;
+			padding: 28px;
+			font-family: serif;
+			font-size: 18px;
+			border: 5px solid #00BCD4;
+			margin: 10px;
+			padding: 40px;
+				}
+					
+		</style>
+
+</head>
+<body style="background-color:#e6e4eb;">
+	<center>
+		<br></br>
+		<h1>सार्वजनिक श्रम प्रबंध द्वार</h1>
+		<h1>General Labour Management Portal</h1><br>
+		
+		
+	</center>
+	
+	
+	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent" class="navbar-centered">
+			<ul>
+				<button type="button" class="btn btn-outline-dark"><li class="nav-link dropdown"class="center-left ">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						लॉग इन/Login</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="newregistration.html">खाता खोले<br>New Registration</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="userlogin.html">लॉग इन<br>User Login</a>
+				<!--	<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="adminlogin.php">आडमिन लॉग इन <br>Admin Login</a>-->
+					</div>
+				</li></ul></button>
+				<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link px-3" href="template.html">Home<span class="sr-only">(current)</span></a></li> 
+				<li class="nav-item"><a class="nav-link px-3" href="guidelines.html">Guidelines</a></li>  
+				
+				
+				<li class="nav-item"><a class="nav-link px-3" href="jobvacancy.html">Job Vacancy</a></li>
+				<li class="nav-item dropdown"><a class="nav-link px-3" href="dashboard.html">Dashboard</a></li>
+				<li class="nav-item dropdown"><a class="nav-link px-3" href="team.html">Team</a></li>
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link  dropdown-toggle px-3"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Help Desk</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item"href="#FAQ">FAQ</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#contactus">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+		</nav>
+<br>		
+
+<br>
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div><img height="pixels">
+      <img src="Labours1.jpg" style="width: 100%;height:580px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div><img height="pixels">
+      <img src="Labours2.jpg" style="width: 100%;height: 580px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div><img height="pixels">
+      <img src="Labours3.jpg" style="width: 100%;height: 580px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div><img height="pixels">
+      <img src="Labours4.jpg" style="width: 100%;height: 580px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div><img height="pixels">
+      <img src="Labours5.jpg" style="width: 100%;height: 580px;">
+  </div>
+
+  
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+ <script src="image.js"></script>
+</div>
+
+<br>
+<div align="center" >
+	<a <button type="button" class="btn btn-dark px-3" href="newregistration.html" > रजिस्टर <br> REGISTER</button></a>
+</div>
+
+<br>
+<section>
+<div align="center"> <h3>ABOUT <br></h3>
+<p class="tab">
+अ-स्थानीयकृत क्षेत्र के श्रमिक को संगठित तरीके से रोजगार देना समय की आवश्यकता है “राष्ट्रव्यापी कार्यकर्ता अद्वितीय आईडी और गैर-स्थानीयकृत क्षेत्र के कार्यकर्ता के लिए डेटाबेस”, होगा इसके लिए प्रवेश द्वार। "सार्वजनिक श्रम प्रबंध द्वार", एक के लिए एक तकनीकी समाधान गैर-प्रशिक्षित श्रमिकों (मज़दूर, दिहाड़ी मज़दूर, किसान, मजदूर, सड़क विक्रेता) को बनाए रखने के लिए रोजगार और कर्मचारी प्रबंधन डेटाबेस के लिए एकीकृत मंच। यह उपयोगकर्ताओं के बीच एक पत्राचार इंटरफ़ेस और वेब के साथ आवश्यक के रूप में जाता है आवेदन। यह उन्हें (उपयोगकर्ता / श्रमिकों) रजिस्टर और उनके काम के स्थान का विवरण अपडेट करने देगा। यह उन्हें (उपयोगकर्ता / श्रमिकों को) उनके विकास के लिए और नौकरी की अधिसूचना के साथ धन प्राप्त करने में मदद करेगा एसएमएस के माध्यम से रिक्तियों।यह तकनीक अधिकारियों (अर्थात सरकार) को वास्तविक प्रदान करेगी श्रमिकों (प्रवासी मजदूरों, दिहाड़ी मजदूरों, सड़क विक्रेताओं) की गिनती और डेटा, किसानों)। ताकि, आपातकालीन बचाव अभियान, संकट, प्राकृतिक / मानव निर्मित आपदाओं के समय में आवश्यक कदम अधिक तेजी से उठाए जा सकते हैं क्योंकि उनकी (सरकार) गिनती होगी एक अनुमानित गिनती के बजाय लोगों की। उनके (कार्यकर्ता / उपयोगकर्ता) विवरण के साथ होगा आसान ट्रैकिंग के लिए अधिकारियों (सरकार)।
+
+</br>
+Employment of non-localised sector worker in an organised way is the need of the hour “Nationwide worker unique ID & database for Non- localised sector worker”, would be the gateway for it. The “General labour management portal”, a technological solution for a unified platform for employment & employee management database to maintain the nonlocalised workers (mazdoor, daily wage workers, farmers, labourers, street vendors). It goes about as a correspondence interface among users and the requirters with the web application. It will let them(user/workers) register & update details of their place of work. It will help them(user/workers) avail funds for their development and with notification of job vacancies through SMS.This technology would provide the authorities (ie. Government ) with the actual count and data of the workers (migrant labourers, daily wage workers, street vendors,farmers). So, that in time of emergency rescue operation, crisis, natural/man-made disasters necessary steps could be taken more swiftly because they(the government) will have a count of the people rather than an estimated count. Their (workers/user) details would be with the authorities (government) for easier tracking.
+</p>
+	<h3>FEATURES <br></h3>
+	</br> 
+	<div class="box">
+	<div class="row">
+    <div class="col"><h3>राष्ट्रव्यापी कर्मचारी के लिए विशिष्ट पहचान होगी<br>Unique Identity to Nationwide employee</h3></div>
+    <div class="col"><h3>अ-स्थानीयकृत क्षेत्र में श्रमिकों की वास्तविक गिनती दें<br>Give the actual count of workers in non-localised sector</h3></div>
+	<div class="col"><h3>अनुरोधकर्ता नौकरी के लिए रिक्तियों को पोस्ट कर सकते हैं<br>The requirters can post vacancies for job</h3></div>
+    <div class="w-100"></div>
+    <div class="col"style="width: 100%;display: flex;"><p>यह श्रमिकों रजिस्टर और उनके काम के स्थान का विवरण अपडेट करने देगा। यह उपयोगकर्ता / श्रमिकों को)उनके विकास के लिए और नौकरी की अधिसूचना के साथ धन प्राप्त करने में मदद करेगा रिक्त पद | अद्वितीय कर्मचारी आईडी गैर-संगठित क्षेत्र के कर्मचारी की पहचान करने में मदद करेगी देश भर के लाभार्थी।अद्वितीय रोजगार आईडी जिसमें जानकारी होगी कि वे कहां और क्या काम करते हैं, किस प्रकार का कार्यकर्ता है(प्रवासी कार्यकर्ता, मौसमी कार्यकर्ता, डेलीवेज, स्ट्रीट वेंडर आदि) अन्य बुनियादी विवरणों के साथ।<br></br> This will allow workers to register and update their work place details. This will help the users / workers) for their development and to receive funds with job notification vacancies. Unique Employee IDs will help identify unorganized sector employee beneficiaries across the country. Unique Employment IDs containing information about where and what they work, what type of worker they are (migrant worker, seasonal worker, dailyways, street Vendors etc.) along with other basic details.</p>
+    </div>
+    <div class="col"style="width: 100%;display: flex;"><p>यह तकनीक अधिकारियों (अर्थात सरकार) को वास्तविक प्रदान करेगी श्रमिकों (प्रवासी मजदूरों, दिहाड़ी मजदूरों, सड़क विक्रेताओं) की गिनती और डेटा, किसानों)। ताकि, आपातकालीन बचाव अभियान, संकट, प्राकृतिक / मानव निर्मित आपदाओं के समय में आवश्यक कदम अधिक तेजी से उठाए जा सकते हैं क्योंकि उनकी (सरकार) गिनती होगी एक अनुमानित गिनती के बजाय लोगों की। उनके (कार्यकर्ता / उपयोगकर्ता) विवरण के साथ होगा आसान ट्रैकिंग के लिए अधिकारियों (सरकार)। यह विकसित करने में मदद करेगा रोजगार क्षेत्रों को डिजिटल रूप से।<br></br>This technique will provide real to the officials (ie the government) counting and data of workers (migrant laborers, daily laborers, street vendors), farmers). So that, in times of emergency rescue operations, crises, natural / man-made disasters, necessary steps can be taken more quickly because their (government) count will be of people rather than an estimated count. Officers (government) for easy tracking with their (worker / user) details. This will help develop employment sectors digitally.</p>
+	</div>
+	<div class="col"style="width: 100%;display: flex;"><p>उपयोगकर्ता को सूचित रखने के लिए सरकार से दिशानिर्देश नियमित रूप से अपडेट किए जाएंगे नीति अपडेट या नई नीतियां। इसके अलावा, उपयोगकर्ता के आधार पर नौकरी की रिक्तियों के लिए देख सकते हैं नौकरी का स्थान और प्रकार।यह पहल यह सुनिश्चित करेगी कि प्रत्येक कार्यकर्ता कम से कम प्राप्त करे न्यूनतम दैनिक वेतन, जो 2020 के अंत तक 178.00 रुपये / दिन तक पहुंचने की उम्मीद है ट्रेडिंग इकोनॉमिक्स वैश्विक मैक्रो मॉडल और विश्लेषकों की भारत में उम्मीदों के लिए।<br><br></br>Guidelines from the government will be updated regularly to keep the user informed. Policy updates or new policies. In addition, users can look for job vacancies based on job location and type. This initiative will ensure that every worker receives at least the minimum daily wage, which is expected to reach Rs 178.00 / day by the end of 2020. Expect Trading Economics to meet global macro models and analysts' expectations in India.</p>
+   
+  </div>
+</div>
+	
+		<h3>VIDEO<br></h3>
+		<video width="520" height="340" controls>
+		<source src="GHCI_labour_mgmt_portal.mp4" type="video/mp4">
+		<br>
+		<h5>Your browser does not support the video tag.</h5>
+		</video><br>
+		<h3><a name="FAQ">FAQs<br> </a></h3><br>
+		 
+		 <h4>What is general labour management portal?<br></h4><br>
+		 <div align="justify"style="width:80%;height:100%;margin-left: auto;margin-right: auto">
+		<h5>The “General labour management portal”, a technological solution for aunified platform for employment & employee management database to maintain the nonlocalised workers (mazdoor, daily wage workers, farmers, labourers, street vendors).</h5><br>
+		 </div>
+		 <h4>Is opening/registering/creating account free?<br></h4><br>
+		<div align="center"style="width:80%;height:100%;margin-left: auto;margin-right: auto">
+		 <h5>Yes, account opening and registration is free of charge. </h5><br>
+		 </div>
+		 <h4>How to find work?<br></h4><br>
+		 <div align="center"style="width:80%;height:100%;margin-left: auto;margin-right: auto">
+		 <h5> You can find and apply for work from <a href = "jobvacancy.html">job vacancy</a>portal.</h5><br>
+		 </div>
+		 <h4>How to find daily workers?<br></h4><br>
+		 <div align="justify"style="width:80%;height:100%;margin-left: auto;margin-right: auto">
+		 <h5>You can hire potential workers by posting the job vacancy.To advertise for job vacancy you can <a href="mailto:mygmail@gmail.com?subject = post = Job vacancy">contact us</button></a>.</h5><br>
+		 </div>
+		 <h4>What is the work of general labour management portal?<br></h4><br>
+		 <div align="justify"style="width:80%;height:100%;margin-left: auto;margin-right: auto">
+		 <h5>The “General labour management portal”,collects the information of non-localised sector worker to a unified nation wide database.This unified application would provide Unique Identity to Nationwide employee individually through a unique number as a perpetual entity.This technology provides the authorities (ie. Government ) with the actual count and data of the workers (migrant labourers, daily wage workers, street vendors, farmers).So, that in time of emergency rescue operation, crisis, natural/man-made disasters necessary steps could be taken more swiftly because they(the government) will have a count of the people rather than an estimated count. Their (workers/user) details would be with the authorities (government) for easier tracking.</h5><br>
+		 </div>
+		 
+		 
+		 </div>
+		 
+		<br> </div>
+<div align="center">
+<h3> BEHIND THE SCENES <br> 
+	QTech</h3></br>
+	<h4>We are technocrats aspiring to explore the vistas of technology.To know more meet our 
+	<a href="team.html">team</a>.</h4></div>
+	<div align="center">
+	<h3><a name="contactus">CONTACT US</a><br></h3>
+	<h4></br><a href = "mailto:amory.ubuntu@gmail.com?subject = Feedback&body = Message">संपर्क करें / Contact Us</a></h4></br>
+
+
+</div>
+</br>
+<a href="https://ghc.anitab.org/"><img src="Sponser.png" style="width: 100%; height: 50%"></a>
+
+<br>	
+	
+<footer>
+  <h3>Navigation<br></h3>
+  
+  <h6>
+  <a href="template.html">About</a><br>
+  <a href="newregistration.html">Registration</a><br>
+  <a href="userlogin.html">Login</a><br>
+  <a href="guidelines.html">Guidelines</a></br>
+  <a href="jobvacancy.html">Job Vacancy</a></br>
+  <a href="#FAQ">Help Desk</a></br>
+  <a href = "mailto:mygmail@gmail.com?subject = Feedback&body = Message">Contact Us</a><br>
+  </h6>
+  <br>
+  <h4>&copy; 2020 General Labout Management Portal.<br>
+  Powered by GHCI 20 Codeathon for Women Students by AnitaB.org</h4>
+</footer>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<style>
+			.navbar a:hover {
+			background-color: DarkSalmon;
+			color: black;
+			}
+			.navbar a.active {
+            background-color: DarkSalmon;
+            color: white;
+            }
+			footer {
+            display: block;
+			text-align: center;
+			padding: 3px;
+			background-color: DarkSalmon;
+			color: white;
+			}
+			.responsive {
+			width: 100%;
+			height: auto;
+			}
+			* {
+			  box-sizing: border-box;
+			}
+
+			/* Position the image container (needed to position the left and right arrows) */
+			.container {
+			  position: relative;
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+			  display: none;
+			}
+
+			/* Add a pointer when hovering over the thumbnail images */
+			.cursor {
+			  cursor: pointer;
+			}
+
+			/* Next & previous buttons */
+			.prev,
+			.next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 40%;
+			  width: auto;
+			  padding: 16px;
+			  margin-top: -50px;
+			  color: white;
+			  font-weight: bold;
+			  font-size: 20px;
+			  border-radius: 0 3px 3px 0;
+			  user-select: none;
+			  -webkit-user-select: none;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+			  right: 0;
+			  border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover,
+			.next:hover {
+			  background-color: rgba(0, 0, 0, 0.8);
+			}
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 0;
+			}
+
+			/* Container for image text */
+			.caption-container {
+			  text-align: center;
+			  background-color: #222;
+			  padding: 2px 16px;
+			  color: white;
+			}
+
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+			/* Six columns side by side */
+			.column {
+			  float: left;
+			  width: 16.66%;
+			}
+
+			/* Add a transparency effect for thumnbail images */
+			.demo {
+			  opacity: 0.6;
+			}
+
+						.active,
+						.demo:hover {
+						  opacity: 1;
+						}
+						/* Three columns side by side */
+			.column {
+			  float: left;
+			  width: 33.3%;
+			  margin-bottom: 16px;
+			  padding: 0 8px;
+			}
+
+			/* Display the columns below each other instead of side by side on small screens */
+			@media screen and (max-width: 650px) {
+			  .column {
+				width: 100%;
+				display: block;
+			  }
+			}
+
+			/* Add some shadows to create a card effect */
+			.card {
+			  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			}
+
+			/* Some left and right padding inside the container */
+			.container {
+			  padding:6px;
+			}
+
+			/* Clear floats */
+			.container::after, .row::after {
+			  content: "";
+			  clear: both;
+			  display: table;
+			}
+
+			.title {
+			  color: grey;
+			}
+
+			.button {
+			  border: none;
+			  outline: 0;
+			  display: inline-block;
+			  padding: 8px;
+			  color: white;
+			  background-color: #000;
+			  text-align: center;
+			  cursor: pointer;
+			  width: 100%;
+			}
+
+			.button:hover {
+			  background-color: #555;
+			}
+			p{
+			text-align: justify;
+			padding: 28px;
+			font-family: serif;
+			font-size: 18px;
+			margin: 10px;
+			padding: 20px;
+				}
+			h2{
+			margin: 0px;
+			text-align: center;
+			font-size: 40px;
+			color: black;
+				}
+			h3{
+			text-align: center;
+			font-size: 36px;
+			color: #CDDC39;
+			border-bottom: 2px solid #ff5722;
+			margin: 22px;
+			padding: 12px;
+				}
+		</style>
+
+</head>
+<body style="background-color:#e6e4eb;">
+	<center>
+		<br></br>
+		<h1>सार्वजनिक श्रम प्रबंध द्वार</h1>
+		<h1>General Labour Management Portal</h1><br>
+		
+		
+	</center>
+	
+	
+	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent" class="navbar-centered">
+			<ul>
+				<button type="button" class="btn btn-outline-dark"><li class="nav-link dropdown"class="center-left ">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						लॉग इन/Login</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="newregistration.html">खाता खोले<br>New Registration</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="userlogin.html">लॉग इन<br>User Login</a>
+				<!--	<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="adminlogin.php">आडमिन लॉग इन <br>Admin Login</a>-->
+					</div>
+				</li></ul></button>
+				<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link px-3" href="template.html">Home</a></li> 
+				<li class="nav-item"><a class="nav-link px-3" href="guidelines.html">Guidelines</a></li>  
+				
+				
+				<li class="nav-item"><a class="nav-link px-3" href="jobvacancy.html">Job Vacancy<span class="sr-only">(current)</span></a></li>
+				<li class="nav-item dropdown"><a class="nav-link px-3" href="dashboard.html">Dashboard</a></li>
+				<li class="nav-item dropdown"><a class="nav-link px-3" href="team.html">Team</a></li>
+				
+				<!--<li class="nav-item dropdown">
+					<a class="nav-link  dropdown-toggle px-3"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Help Desk</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="faq.html">FAQ</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="contact.html">Contact Us</a>
+				</li>-->
+			</ul>
+		</div>
+		</nav>
+<br>
+<div align="center">
+<h3> MEET THE TEAM <br></h3><br></br>
+ 
+	<div class="row">
+  <div class="column">
+    <div class="card"><br>
+      <img src="img.jpeg" alt="Preeti" style="width:50%;height:100%;margin-left: auto;
+    margin-right: auto">
+      <div class="container">
+        <h2>Preeti Kumari Murmu</h2></br>
+        <h3 class="title">Team Member</h3>
+        <p>St. Xavier's College, Ranchi.I like to learn different technologies. With this project i want to put my knowledge of website development in solving real life problems.</p>
+        <p>mygmail@gmail.com</p>
+        <p><button class="button"><a  href="https://www.linkedin.com/in/preeti-murmu-8322041a2">Contact</a></button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card"><br>
+      <img src="img.jpeg" alt="Jayanti" style="width:50%;height:100%;margin-left: auto;
+    margin-right: auto">
+      <div class="container">
+        <h2>Jayanti Singh</h2></br>
+        <h3 class="title">Team Leader</h3>
+        <p>Hello, I'm a rising senior undergraduate student at Raksha Shakti University, Gandhinagar pursuing Computer Science Engineering with specialization in Cyber Security.I'm keenly interested in Software development,Quantum Computing enhanced Machine Learning.Eager to contribute for a better future in the field of technology.</p>
+        <p>mygmail@gmail.com</p>
+        <p><button class="button"><a href="https://www.linkedin.com/in/jayanti-singh-ab6b65179/">Contact</a></button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card"><br>
+      <img src="img.jpeg" alt="Sakshi" style="width:50%;height:100%;margin-left: auto;
+    margin-right: auto">
+      <div class="container">
+        <h2>Sakshi Shivanand</h2></br>
+        <h3 class="title">Team Member</h3>
+        <p>I'm a student at Kls Gogte Institute Of Technology Belgaum </p>
+        <p>mygmail@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</br>
+<footer>
+  <h3>Navigation<br></h3>
+  
+  <h6>
+  <a href="template.html">About</a><br>
+  <a href="newregistration.html">Registration</a><br>
+  <a href="userlogin.html">Login</a><br>
+  <a href="guidelines.html">Guidelines</a></br>
+  <a href="jobvacancy.html">Job Vacancy</a></br>
+  <a href="#FAQ">Help Desk</a></br>
+  <a href = "mailto:amory.ubuntu@gmail.com?subject = Feedback&body = Message">Contact Us</a><br>
+  </h6>
+  <br>
+  <h4>&copy; 2020 General Labout Management Portal.<br>
+  Powered by GHCI 20 Codeathon for Women Students by AnitaB.org</h4>
+</footer>
+</body>
+</html>
+
+
